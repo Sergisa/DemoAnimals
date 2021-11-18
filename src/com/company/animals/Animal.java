@@ -1,9 +1,7 @@
 package com.company.animals;
 
-import com.company.Feedable;
-
-public class Animal {
-    int height,weight;
+public abstract class Animal {
+    int height, weight;
 
     public Animal(int height, int weight) {
         this.height = height;
@@ -18,8 +16,9 @@ public class Animal {
                 '}';
     }
 
-    public void eat(String food){
-        System.out.println("Animal eats" + food);
+    public void eat(String food) {
+
     }
 
+    abstract public void walk();
 }
