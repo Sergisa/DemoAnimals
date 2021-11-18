@@ -11,10 +11,43 @@ public class Main {
         Dog spotti = new Dog(20, 5);
         Cat salem = new Cat(40, 70);
 
-        System.out.println(sharik);
-        System.out.println(spotti);
-        System.out.println(salem);
+        Feedable someFeeadable = new Feedable() {
+            @Override
+            public void eat(String food) {
+                System.out.println("Кто-то выполняет действие ЕСТЬ");
+            }
+
+            @Override
+            public void doSth() {
+
+            }
+        };
+
+        sharik.eat("meat");
+        spotti.eat("fish");
+        salem.eat("fish");
+        someFeeadable.eat("coffe");
+
+
+        feed(spotti);
+        feed(salem);
+        feed(someFeeadable);
+        feed(new Feedable() {
+            @Override
+            public void eat(String food) {
+
+            }
+
+            @Override
+            public void doSth() {
+
+            }
+        });
     }
 
+    public static void feed(Feedable someFeeadableCreature) {
+        someFeeadableCreature.eat("");
+        someFeeadableCreature.doSth();
+    }
 
 }

@@ -1,11 +1,13 @@
 package com.company.animals;
 
-public class Dog extends Animal {
+import com.company.Feedable;
+
+public class Dog extends Animal implements Feedable {
     public Dog(int height, int w) {
         super(height, w);
     }
 
-
+    @Override
     public void doSth(){
 
     }

@@ -2,7 +2,7 @@ package com.company.animals;
 
 import com.company.Feedable;
 
-public class Animal implements Feedable {
+public class Animal {
     int height,weight;
 
     public Animal(int height, int weight) {

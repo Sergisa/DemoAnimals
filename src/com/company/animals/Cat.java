@@ -1,6 +1,8 @@
 package com.company.animals;
 
-public class Cat extends Animal {
+import com.company.Feedable;
+
+public class Cat extends Animal implements Feedable {
     private final String color = "white";
     public Cat(int height, int w) {
         super(height, w);
@@ -14,5 +16,10 @@ public class Cat extends Animal {
     }
     public void eat(String food){
         System.out.println("Animal eats" + food);
+    }
+
+    @Override
+    public void doSth() {
+
     }
 }
